@@ -1,0 +1,26 @@
+@import 'normalizate.css';
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__menu{
+    display: flex;
+    gap: var(--spacing-20);
+    align-items: center;
+}
+
+
+
