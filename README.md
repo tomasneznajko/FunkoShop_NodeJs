@@ -6,7 +6,7 @@
 - CSS
 - JavaScript
 ### Back-end:
-- Node.Js
+- Node.js
 - Express
 ### Medio persistente:
 - Base de datos MySQL
