@@ -1,12 +1,12 @@
 # FunkoShop_NodeJs - Proyecto de codo a codo
 
 ## Herramientas utilizadas:
-###Front-end:
+### Front-end:
 - HTML5
 - CSS
 - JavaScript
-###Back-end:
+### Back-end:
 - Node.Js
 - Express
-###Medio persistente:
+### Medio persistente:
 - Base de datos MySQL
