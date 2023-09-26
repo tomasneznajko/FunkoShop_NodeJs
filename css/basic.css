@@ -1,13 +1,10 @@
 @import 'normalizate.css';
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 header{
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-36);
+    z-index: 1;
 }
 
 .navbar{
@@ -45,6 +42,7 @@ header{
     width: 30rem;
     position: absolute;
     background-color: var(--dark-bg-solid);
+    z-index: 3;
 }
 
 .submenu__link{
@@ -61,4 +59,26 @@ header{
 
 .submenu__link:hover{
     background-color: var(--primary-900);
+}
+
+.navbar__cart:hover img{
+    filter: brightness(0) saturate(100%) invert(30%) sepia(40%) saturate(5924%) hue-rotate(343deg) brightness(104%) contrast(90%);
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.vertical{
+    flex-direction: column;
+    gap:0;
+    text-transform: uppercase;
+}
+
+.footer__copy{
+    margin-top: var(--spacing-36);
+    text-align: center;
 }
