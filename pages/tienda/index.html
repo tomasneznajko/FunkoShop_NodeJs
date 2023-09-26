@@ -16,10 +16,28 @@
             </a>
         </picture>
         <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="./shop.html" class="navbar__link">
-                    Shop
+            <li class="navbar__item with-submenu">
+                <a href="./shop.html" class="navbar__link with-icon">
+                    Shop <iconify-icon icon="mdi:chevron-down"></iconify-icon>
                 </a>
+                
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">
+                            Funkos
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">
+                            Remeras
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">
+                            Llaveros
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="navbar__item">
                 <a href="./contact.html" class="navbar__link">
@@ -140,5 +158,6 @@
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 </html>

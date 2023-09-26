@@ -22,5 +22,43 @@ header{
     align-items: center;
 }
 
+.navbar__link{
+    display: inline-block;
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+
+.navbar__link:hover{
+    background-color: var(--primary-900);
+}
+
+.with-icon{
+    display: flex;
+    align-content: center;
+    padding: var(--spacing-8);
+}
+
+.submenu{
+    display: none;
+    width: 30rem;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+}
+
+.submenu__link{
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+
+.with-submenu:hover .submenu{
+    display: block;
+}
 
 
+.submenu__link:hover{
+    background-color: var(--primary-900);
+}

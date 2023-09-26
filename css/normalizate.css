@@ -71,7 +71,6 @@ html {
 a {
     font-family: var(--alternative-font);
     text-decoration: none;
-    font-size: 2em;
     color: inherit;
 }
 
