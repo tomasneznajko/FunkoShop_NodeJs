@@ -3,36 +3,63 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Cart - Funkoshop</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../../css/cart.css">
     </head>
     <body>
         <header>
-            <nav>
-             <picture>
-                 <a href="./index.html">  <img src="../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko SHop"> </a>
-         
+            <nav class="navbar container">
+             <picture class="navbar__logo">
+                 <a href="./index.html">  
+                     <img src="../../images/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko Shop"> 
+                 </a>
              </picture>
-             <ul>
-                 <li>
-                     <a href="./pages/shop.html">Shop</a>
+             <ul class="navbar__menu">
+                 <li class="navbar__item with-submenu">
+                     <a href="./shop.html" class="navbar__link with-icon">
+                         Shop <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                     </a>
+                     
+                     <ul class="submenu">
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Funkos
+                             </a>
+                         </li>
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Remeras
+                             </a>
+                         </li>
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Llaveros
+                             </a>
+                         </li>
+                     </ul>
                  </li>
-                 <li>
-                     <a href="./pages/contact.html">Contacto</a>
+                 <li class="navbar__item">
+                     <a href="./contact.html" class="navbar__link">
+                         Contacto
+                     </a>
                  </li>
-                 <li>
-                     <a href="./pages/login.html">Log in</a>
+                 <li class="navbar__item">
+                     <a href="../admin/login.html" class="navbar__link">
+                         Log in
+                     </a>
                  </li>
-                 <li>
-                     <a href="./pages/cart.html"><img src="./img/icons/cart-icon.svg" alt=""></a>
+                 <li class="navbar__item">
+                     <a href="./cart.html" class="navbar__cart">
+                         <img src="../../images/icons/cart-icon.svg" alt="carrito de compras">
+                     </a>
                  </li>
              </ul>
             </nav>
-         </header>
+        </header>
      
-         <main>
+        <main>
             <h1>CARRITO DE COMPRAS</h1>
             <div>
                 <h4>Detalle del producto</h4>
@@ -80,23 +107,30 @@
                 </button>
             </div>
 
-         </main>
+        </main>
 
-        <footer>
-            <section>
-            </section>
-        
-            <nav>
-                <ul>
-                    <li><a href="./pages/shop.html">SHOP</a></li>
-                    <li><a href="./pages/register.html">REGISTRARSE</a></li>
-                    <li><a href="./pages/login.html">LOGIN</a></li>
-                    <li><a href="./pages/contact.html">CONTACTO</a></li>
+        <footer class="footer">
+            <nav class="navbar container">
+                <ul class="navbar__menu vertical">
+                    <li class="navbar__link">
+                        <a href="./shop.html">Shop</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="../admin/register.html">Registrarse</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="../admin/login.html">Log in</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="./pages/contact.html">Contacto</a>
+                    </li>
                 </ul>
-                <picture><img src="./img/branding/isotype.svg" alt=""></picture>
+                <picture><img src="../../images/branding/isotype.svg" alt=""></picture>
             </nav>
-            <p>All rights reserved 2023 - Funkoshop &copy;</p>
-        
+            <p class="footer__copy">
+                All rights reserved 2023 - Funkoshop &copy;
+            </p>
+    
         </footer>
         
     </body>
