@@ -62,6 +62,10 @@ header{
     background-color: var(--primary-900);
 }
 
+.navbar__cart{
+    transition: background .3s ease-in-out;
+}
+
 .navbar__cart:hover img{
     filter: brightness(0) saturate(100%) invert(30%) sepia(40%) saturate(5924%) hue-rotate(343deg) brightness(104%) contrast(90%);
 }

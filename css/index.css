@@ -1,6 +1,7 @@
-@import 'basic.css';
-@import 'collection.css';
-@import 'slider.css';
+@import 'base/basic.css';
+@import 'library/collection.css';
+@import 'library/slider.css';
+
 
 
 /* HERO */

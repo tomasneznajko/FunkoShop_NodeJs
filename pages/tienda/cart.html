@@ -59,53 +59,113 @@
             </nav>
         </header>
      
-        <main>
-            <h1>CARRITO DE COMPRAS</h1>
-            <div>
-                <h4>Detalle del producto</h4>
-                <h4>Cantidad</h4>
-                <h4>Total</h4>
-            </div>
+        <main class="main container">
+            <section class="prod container">
+                <h2 class="main__title">
+                    Carrito de compras
+                </h2>
 
-            <div>
-                <article>
-                <h3>BABY YODA BLUEBALL</h3>
-                <p>STAR WARS</p>
-                <picture><img src="../img/star-wars/baby-yoda-1.webp" alt="baaby Yoda"></picture>
-                <p>Precio: $1799,99</p>
-            </article>
+                <div class="prod__table">
+                    <div class="prod__box box__line">
+                        <p class="header__text flex-item-1">
+                            Detalle del producto
+                        </p>
+                        <p class="header__text flex-item-2">
+                            Cantidad
+                        </p>
+                        <p class="header__text flex-item-3">
+                            Total
+                        </p>
+                        <p class="header__text icon__none"></p>
+                    </div>
 
-                         <!-- "Acá va el contador de items pero todavía no sabemos cómo hacerlo" -->
-                         <p>$ 3599,99</p>
-                         <img src="" alt="cruz roja dentro de circulo rojo">
+                    <article class="prod__box box__line prod__item">
+                        <div class="prod__detail flex-item-1">
+                            <picture class="detail-item__cover">
+                                <img src="../../images/star-wars/baby-yoda-1.webp" alt="baaby Yoda">
+                            </picture>
+                            <div class="detail-item__text">
+                                <div>
+                                    <h3 class="detail-item__title">BABY YODA BLUEBALL</h3>
+                                    <p class="detail-item__subtitle">STAR WARS</p>
+                                </div>
+                                <p class="detail-item__price">Precio: $1799,99</p>
+                            </div>
+                        </div>
+                        <div class="cart__counter flex-item-2">
+                            <input type="text" name="cart_input" id="cart_input" placeholder="0" class="cart__input cart__item">
+                            <div class="counter cart__item">
+                                <input type="button" value="+" class="counter__item">
+                                <input type="button" value="-" class="counter__item">
 
-            </div>
+                            </div>
+                        </div>
+                        <p class="prod__price flex-item-3">
+                            $ 3599,99
+                        </p>
+                        <a href="" class="prod__closed">
+                            <iconify-icon icon="tabler:xbox-x" style="color: #f33;" width="28" height="28"></iconify-icon>
+                        </a>
+                        
+                    </article>
 
-            <div>
-                <article>
-                <h3>PIDGEOTTO</h3>
-                <p>POKEMON</p>
-                <picture><img src="../img/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO"></picture>
-                <p>Precio: $1799,99</p>
-            </article>
+                    <article class="prod__box box__line prod__item">
+                        <div class="prod__detail flex-item-1">
+                            <picture class="detail-item__cover">
+                                <img src="../../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
+                            </picture>
+                            <div class="detail__item">
+                                <h3 class="detail-item__title">Pidgeotto</h3>
+                                <p class="detail-item__subtitle">Pokemon</p>
+                                <p class="detail-item__price">Precio: $1799,99</p>
+                            </div>
+                        </div>
+                        <div class="cart__counter flex-item-2">
+                            <input type="text" name="cart_input" id="cart_input" placeholder="0" class="cart__input cart__item">
+                            <div class="counter cart__item">
+                                <input type="button" value="+" class="counter__item">
+                                <input type="button" value="-" class="counter__item">
 
-                         <!-- "Acá va el contador de items pero todavía no sabemos cómo hacerlo" -->
-                         <p>$ 1799,99</p>
-                         <img src="" alt="cruz roja dentro de circulo rojo">
+                            </div>
+                        </div>
+                        <p class="prod__price flex-item-3">
+                            $ 1799,99
+                        </p>
+                        <a href="" class="prod__closed">
+                            <iconify-icon icon="tabler:xbox-x" style="color: #f33;" width="28" height="28"></iconify-icon>
+                        </a>
+                        
+                    </article>
+                </div>
+            </section>
+            
 
-            </div>
-
-            <div>
-                <h2>RESUMEN</h2>
-                <h4>CANTIDAD DE ELEMENTOS</h4>
-                <h4>SUBTOTAL</h4>
-                <h4>ENVIO</h4>
-                <h4>TOTAL</h4>
+            <section class="summary container">
+                <h2 class="main__title">RESUMEN</h2>
+                <div class="prod__box box-summary">
+                    <span class="box__line line__summary">
+                        <p class="summary__text">CANTIDAD DE ELEMENTOS</p>
+                        <p>3</p>
+                    </span>
+                    <span class="box__line line__summary">
+                        <p class="summary__text">SUBTOTAL</p>
+                        <p>$ 5.399,97</p>
+                    </span>
+                    <span class="box__line line__summary">
+                        <p class="summary__text">ENVIO</p>
+                        <p>$ 0,00</p>
+                    </span>
+                    <span class="box__line line__summary final__summary">
+                        <p class="summary__text-total">TOTAL</p>
+                        <p>$ 5.399,97</p> 
+                    </span>
+                </div>
                 <!-- Valores precios -->
-                <button>
-                    
-                </button>
-            </div>
+                <a href="" class="cart__link summary__link">
+                    Ir a pagar
+                </a>
+
+            </section>
 
         </main>
 
@@ -132,6 +192,7 @@
             </p>
     
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
         
     </body>
 </html>
