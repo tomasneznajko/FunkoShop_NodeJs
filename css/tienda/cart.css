@@ -1,5 +1,5 @@
-@import 'base/basic.css';
-@import 'library/counter.css';
+@import '../base/basic.css';
+@import '../library/counter.css';
 
 .main{
     padding: var(--spacing-68) 0;

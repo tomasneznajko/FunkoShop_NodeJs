@@ -1,7 +1,7 @@
-@import 'base/basic.css';
-@import 'library/collection.css';
-@import 'library/slider.css';
-@import 'library/counter.css';
+@import '../base/basic.css';
+@import '../library/collection.css';
+@import '../library/slider.css';
+@import '../library/counter.css';
 
 .collection__content{
     
