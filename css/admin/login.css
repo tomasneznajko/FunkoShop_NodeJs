@@ -31,6 +31,8 @@
     width: 15rem;
 }
 
+/* EXTRA */
+
 .form__remember{
     display: flex;
     gap: var(--spacing-8);
