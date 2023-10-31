@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/admin/edit.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar container">
+             <picture class="navbar__logo">
+                 <a href="./index.html">  
+                     <img src="../../images/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko Shop"> 
+                 </a>
+             </picture>
+             <ul class="navbar__menu">
+                 <li class="navbar__item with-submenu">
+                     <a href="./shop.html" class="navbar__link with-icon">
+                         Shop <iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon>
+                     </a>
+                     
+                     <ul class="submenu">
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Funkos
+                             </a>
+                         </li>
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Remeras
+                             </a>
+                         </li>
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Llaveros
+                             </a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li class="navbar__item">
+                     <a href="./contact.html" class="navbar__link">
+                         Contacto
+                     </a>
+                 </li>
+                 <li class="navbar__item">
+                     <a href="../admin/login.html" class="navbar__link">
+                         Log in
+                     </a>
+                 </li>
+                 <li class="navbar__item">
+                     <a href="./cart.html" class="navbar__cart">
+                         <img src="../../images/icons/cart-icon.svg" alt="carrito de compras">
+                     </a>
+                 </li>
+             </ul>
+            </nav>
+        </header>    
+        <main class="container form">
+            <h2 class="form__title">Editar item</h2>
+            <form class="create__form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form__flex">
+                    <div class="form__box--flex">
+                        <label class="form__label" for="collection">Categoría:</label>
+                        <select class="form__select select__width--intermediate" name="collection" id="collection" required>
+                            <option value="" disabled selected hidden>Seleccionar</option>
+                            <option value="Figuras Coleccionables">Figuras Coleccionables</option>
+                            <option value="Llaveros">Llaveros</option>
+                            <option value="Remeras">Remeras</option>
+                        </select>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="collection">Licencia:</label>
+                        <select class="form__select select__width--intermediate" name="collection" id="collection" required>
+                            <option value="" disabled selected hidden>Seleccionar</option>
+                            <option value="starwars">Star Wars</option>
+                            <option value="pokemon">Pokemon</option>
+                            <option value="harrypotter">Harry Potter</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__label" for="name">Nombre del producto:</label>
+                    <input class="form__input form__text" type="text" name="name" id="name" placeholder="Kakashi Hatake Shippuden Saga" size="25" required>
+                </div>
+                <div>
+                    <textarea class="form__textarea form__text" name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto" required></textarea>
+                </div>
+                <div class="form__flex">
+                    <div class="form__box--flex">
+                        <label class="form__label" for="sku">SKU:</label>
+                        <input class="form__input form__text" type="text" name="sku" id="sku" placeholder="SSK111AB001" size="9" required>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="price">Precio:</label>
+                        <div class="form__input--wrapper form__text"><span>$</span><input class="form__input form__text" type="text" name="price" id="price" data-type="currency" placeholder="0.000,00" size="6"></div>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="stock">Stock:</label>
+                        <div class="form__input--wrapper form__text"><input class="form__input form__text form__small" type="text" name="stock" id="stock" placeholder="0" size="2" required><span>unidades</span></div>
+                    </div>
+                </div>
+                <div class="form__flex">
+                    <div class="form__box--flex">
+                        <label class="form__label" for="discount">Descuento:</label>
+                        <div class="form__input--wrapper form__text">
+                            <input class="form__input form__text form__small" type="text" name="discount" id="discount" placeholder="0" size="2" required>
+                            <span>%</span>
+                        </div>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="dues">Cuotas:</label>
+                        <select class="form__select select__width--large" name="dues" id="dues">
+                            <option value="0">Sin cuotas</option>
+                            <option value="3">3 cuotas s/ interés</option>
+                            <option value="6">6 cuotas s/ interés</option>
+                            <option value="9">9 cuotas s/ interés</option>
+                            <option value="12">12 cuotas s/ interés</option>
+                            <option value="18">18 cuotas s/ interés</option>
+                            <option value="24">24 cuotas s/ interés</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__label" for="images">Imagenes:</label>
+                    <input type="file" name="images" id="img" multiple>
+                </div>
+                <div class="form__box--flex">
+                    <div class="edit__img">
+                        <picture class="edit__img--picture">
+                            <img src="../../images/harry-potter/hermione-1.webp" alt="Figura Funko coleccionable de Hermione">
+                        </picture>
+                        
+                        <p class="edit__img--side">Frente</p>
+                    </div>
+                    <div class="edit__img">
+                        <picture class="edit__img--picture">
+                            <img src="../../images/harry-potter/hermione-box.webp" alt="Figura Funko coleccionable de Hermione en caja">
+                        </picture>
+                        
+                        <p class="edit__img--side">Dorso</p>
+                    </div>
+                </div>
+                <div class="form__flex">
+                    <input class="form__btn" type="submit" value="Modificar Producto">
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <nav class="navbar container">
+                <ul class="navbar__menu vertical">
+                    <li class="navbar__link">
+                        <a href="./shop.html">Shop</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="../admin/register.html">Registrarse</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="../admin/login.html">Log in</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="./pages/contact.html">Contacto</a>
+                    </li>
+                </ul>
+                <picture><img src="../../images/branding/isotype.svg" alt=""></picture>
+            </nav>
+            <p class="footer__copy">
+                All rights reserved 2023 - Funkoshop &copy;
+            </p>
+    
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    </body>
+</html>

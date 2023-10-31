@@ -9,148 +9,157 @@
         </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <link rel="icon" href="/images/branding/isotype.svg" type="image/Funkoshop-icon">
+        <link rel="stylesheet" href="../../css/admin/admin.css">
+        <link rel="icon" href="../../images/branding/isotype.svg" type="image/Funkoshop-icon">
     </head>
     <body>
         <header>
-            <nav>
-                <picture>
-                    <a href=""> <!-- voy a home -->
-                        <img src="/images/branding/logo_light_horizontal.svg" alt="Logo de Funkoshop">
-                    </a>                    
-                </picture>
-
-                <ul>
-                    <li>
-                        <a href="">VER TIENDA</a>
-                    </li>
-                    <li>
-                        <a href="">ADMIN</a>
-                    </li>
-                    <li>
-                        <a href="">SALIR</a> <!-- CALCULO QUE A HOME -->
-                    </li>
-                </ul>
+            <nav class="navbar container">
+             <picture class="navbar__logo">
+                 <a href="./index.html">  
+                     <img src="../../images/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko Shop"> 
+                 </a>
+             </picture>
+             <ul class="navbar__menu">
+                 <li class="navbar__item with-submenu">
+                     <a href="./shop.html" class="navbar__link with-icon">
+                         Shop <iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon>
+                     </a>
+                     
+                     <ul class="submenu">
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Funkos
+                             </a>
+                         </li>
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Remeras
+                             </a>
+                         </li>
+                         <li class="submenu__item">
+                             <a href="" class="submenu__link">
+                                 Llaveros
+                             </a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li class="navbar__item">
+                     <a href="./contact.html" class="navbar__link">
+                         Contacto
+                     </a>
+                 </li>
+                 <li class="navbar__item">
+                     <a href="../admin/login.html" class="navbar__link">
+                         Log in
+                     </a>
+                 </li>
+                 <li class="navbar__item">
+                     <a href="./cart.html" class="navbar__cart">
+                         <img src="../../images/icons/cart-icon.svg" alt="carrito de compras">
+                     </a>
+                 </li>
+             </ul>
             </nav>
         </header>
-        <main>
-            <section> <!--Buscador misterioso-->
-                <form action="">
-                    <picture>
-                        <img src="/images/icons/search_icon.svg" alt="Buscador de productos">
-                    </picture>
-                    <input type="search" name="search" id="search" placeholder="código, nombre o categoria">
-                </form>
+        <main class="container-main">
+            <section class="container searcher"> <!--Buscador misterioso-->
+                <picture class="searcher__icon">
+                    <img src="../../images/icons/search_icon.svg" alt="Buscador de productos">
+                </picture>
+                <input class="searcher__bar" type="search" name="search" id="search" placeholder="código, nombre o categoria">
 
             </section>
-            <section> <!--Tabla de productos-->
-                <article>
-                    <h1>LISTADO DE PRODUCTOS</h1>
-                </article>
-                <article>
-                    <a href="">
-                        <h3>
-                            AGREGAR 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                                <path d="M36.8333 28.4516H28.1667V37.1182H23.8333V28.4516H15.1667V24.1182H23.8333V15.4516H28.1667V24.1182H36.8333M41.1667 6.78491H10.8333C8.42833 6.78491 6.5 8.71325 6.5 11.1182V41.4516C6.5 42.6009 6.95655 43.7031 7.7692 44.5157C8.58186 45.3284 9.68406 45.7849 10.8333 45.7849H41.1667C42.3159 45.7849 43.4181 45.3284 44.2308 44.5157C45.0435 43.7031 45.5 42.6009 45.5 41.4516V11.1182C45.5 9.96897 45.0435 8.86677 44.2308 8.05412C43.4181 7.24146 42.3159 6.78491 41.1667 6.78491Z" fill="#FF3333"/>
-                            </svg>
-                        </h3>
-                    </a>
-                </article>
-                <article>
-                    <table>
-                        <thead>
-                            <th>ID</th>
-                            <th>Código</th>
-                            <th>Nombre del Producto</th>
-                            <th>Categoria</th>
-                            <th></th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    1
-                                </td>
-                                <td>
-                                    STW001001
-                                </td>
-                                <td>
-                                    Baby Yoda Blueball
-                                </td>
-                                <td>
-                                    STAR WARS
-                                </td>
-                                <td>
-                                    <a href="">
-                                        <img src="/images/icons/edit_pencil.svg" alt="Editor de producto">
-                                    </a>
-                                    <a href="">
-                                        <img src="/images/icons/delete_trash.svg" alt="Borrador de producto">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    STW001002
-                                </td>
-                                <td>
-                                    Boba Fett Fighter
-                                </td>
-                                <td>
-                                    STAR WARS
-                                </td>
-                                <td>
-                                    <a href="">
-                                        <img src="/images/icons/edit_pencil.svg" alt="Editor de producto">
-                                    </a>
-                                    <a href="">
-                                        <img src="/images/icons/delete_trash.svg" alt="Borrador de producto">
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <section class="container prod__table"> <!--Tabla de productos-->
+                <div class="prod__head">
+                    <h2 class="head__title">LISTADO DE PRODUCTOS</h1>
+                    <span class="head__add">
+                        <p class="head__text">AGREGAR</p> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <path d="M36.8333 28.4516H28.1667V37.1182H23.8333V28.4516H15.1667V24.1182H23.8333V15.4516H28.1667V24.1182H36.8333M41.1667 6.78491H10.8333C8.42833 6.78491 6.5 8.71325 6.5 11.1182V41.4516C6.5 42.6009 6.95655 43.7031 7.7692 44.5157C8.58186 45.3284 9.68406 45.7849 10.8333 45.7849H41.1667C42.3159 45.7849 43.4181 45.3284 44.2308 44.5157C45.0435 43.7031 45.5 42.6009 45.5 41.4516V11.1182C45.5 9.96897 45.0435 8.86677 44.2308 8.05412C43.4181 7.24146 42.3159 6.78491 41.1667 6.78491Z" fill="#FF3333"/>
+                        </svg>
+                    </span>
+                </div>
+                <article class="prod__body">
+                    <div class="prod__header">
+                        <p>ID</p>
+                        <p>Código</p>
+                        <p>Nombre del Producto</p>
+                        <p>Categoria</p>
+                        <p></p>
+                    </div>
+                    <div class="prod__item">
+                        
+                        <p>
+                            1
+                        </p>
+                        <p>
+                            STW001001
+                        </p>
+                        <p>
+                            Baby Yoda Blueball
+                        </p>
+                        <p>
+                            STAR WARS
+                        </p>
+                        <div class="prod__links">
+                            <a href="" class="prod__link">
+                                <img src="/images/icons/edit_pencil.svg" alt="Editor de producto">
+                            </a>
+                            <a href="" class="prod__link">
+                                <img src="/images/icons/delete_trash.svg" alt="Borrador de producto">
+                            </a>
+                        </div>
+                    </div>
+
+                <div class="prod__item">
+                    <p>
+                        2
+                    </p>
+                    <p>
+                        STW001002
+                    </p>
+                    <p>
+                        Boba Fett Fighter
+                    </p>
+                    <p>
+                        STAR WARS
+                    </p>
+                    <div class="prod__links">
+                        <a href="" class="prod__link">
+                            <img src="/images/icons/edit_pencil.svg" alt="Editor de producto">
+                        </a>
+                        <a href="" class="prod__link">
+                            <img src="/images/icons/delete_trash.svg" alt="Borrador de producto">
+                        </a>
+                    </div>
+                </div>
                 </article>
             </section>
         </main>
-        <footer>
-            <section>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="./shop.html">
-                                SHOP
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./register.html">
-                                REGISTRARSE
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./login.html">
-                                INGRESAR
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./contact.html">
-                                CONTACTO
-                            </a>
-                        </li>
-                    </ul>
-                    <picture>
-                        <img src="/images/branding/isotype.svg" alt="Logo de Funkoshop">
-                    </picture>
-                </nav>
-            </section>
-            <p>
-                All rights reserved 2022 - Funkoshop &copy
-            </p>         
+        <footer class="footer">
+            <nav class="navbar container">
+                <ul class="navbar__menu vertical">
+                    <li class="navbar__link">
+                        <a href="./shop.html">Shop</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="../admin/register.html">Registrarse</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="../admin/login.html">Log in</a>
+                    </li>
+                    <li class="navbar__link">
+                        <a href="./pages/contact.html">Contacto</a>
+                    </li>
+                </ul>
+                <picture><img src="../../images/branding/isotype.svg" alt=""></picture>
+            </nav>
+            <p class="footer__copy">
+                All rights reserved 2023 - Funkoshop &copy;
+            </p>
+    
         </footer>
-        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     </body>
 </html>

@@ -1,0 +1,19 @@
+{
+  "name": "funkoshop_nodejs",
+  "version": "1.0.0",
+  "description": "- HTML5\r - CSS\r - JavaScript\r ### Back-end:\r - Node.js\r - Express\r ### Medio persistente:\r - Base de datos MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

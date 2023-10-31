@@ -1,13 +1,14 @@
 @import '../base/basic.css';
 @import '../library/collection.css';
 @import '../library/slider.css';
+@import '../library/card.css';
 
 
 
 /* HERO */
 
 .hero{
-    background-image: url(../images/funkos-banner.webp);
+    background-image: url(../../images/funkos-banner.webp);
     padding: var(--spacing-128);
     background-size: cover;
     background-attachment: fixed;
@@ -64,5 +65,4 @@
     color: var(--light-font-solid);
 }
 
-/* COLLECTION */
 

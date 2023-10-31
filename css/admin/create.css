@@ -1,0 +1,10 @@
+@import '../base/basic.css';
+@import '../library/form.css';
+
+
+.create__form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+

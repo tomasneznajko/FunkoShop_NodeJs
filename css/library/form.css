@@ -1,0 +1,101 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-28);
+    padding: var(--spacing-36) 0;
+}
+
+.form__title{
+    font-size: var(--font-jumbo);
+    font-family: var(--alternative-font);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.form__flex{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-24);
+    flex: 1 1 100%;
+}
+
+.form__box--flex{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.form__label{
+    font-family: var(--base-font);
+    font-weight: 300;
+    font-size: var(--font-large);
+}
+
+/* SELECT */
+
+.form__select{
+    border-radius: 6px;
+    border: 2px solid var(--dark-solid);
+    font-size: var(--font-medium);
+    padding: var(--spacing-8);
+}
+
+.select__width--intermediate{
+    width: 20rem;
+}
+
+.select__width--large{
+    width: 35rem;
+}
+
+/* INPUT */
+
+.form__text{
+    font-size: var(--font-medium);
+    font-family: var(--base-font);
+    font-weight: 400;
+}
+
+.form__input{
+    padding: 1rem .5rem;
+    width: auto;
+    border: none;
+    border-bottom: .125rem solid var(--primary-solid);
+}
+
+.form__input--wrapper{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.form__small{
+    text-align: center;
+}
+
+
+/* TEXTAREA */
+
+.form__textarea{
+    padding: var(--spacing-8);
+}
+
+
+/* BUTTON */
+
+.form__btn{
+    padding: var(--spacing-16);
+    border: none;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary-solid);
+    color: var(--light-font-solid);
+    width: 17.5rem;
+    cursor: pointer;
+}
+
+.form__btn:hover{
+    background-color: var(--tertiary-500);
+}

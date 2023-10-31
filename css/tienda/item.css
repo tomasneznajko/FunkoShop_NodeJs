@@ -1,6 +1,7 @@
 @import '../base/basic.css';
 @import '../library/collection.css';
 @import '../library/slider.css';
+@import '../library/card.css';
 @import '../library/counter.css';
 
 .collection__content{
@@ -21,6 +22,13 @@
 }
 
 
+.cart__item{
+    height: var(--spacing-20);
+}
+
+.counter__item{
+    background-color: var(--dark-bg-solid);
+}
 
 .pay__content{
     display: flex;

@@ -1,0 +1,22 @@
+@import '../base/basic.css';
+@import '../admin/create.css';
+
+.edit__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 15rem;
+    height: 17rem;
+}
+
+.edit__img--picture{
+    border-bottom: .0625rem solid var(--primary-solid);
+}
+
+.edit__img--side{
+    font-family: var(--base-font);
+    font-weight: 500;
+    font-size: var(--font-medium);
+    padding: var(--spacing-8);
+}
