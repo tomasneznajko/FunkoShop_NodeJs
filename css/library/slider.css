@@ -1,4 +1,4 @@
-/* EXTERNAL */
+/* EXTERNAL - GLIDE */
 
 @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
 @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
@@ -20,6 +20,12 @@
     
 }
 
+/* SEPARATION */
+.separation{
+    margin: var(--spacing-68) auto;
+}
+
+
 
 /* SLIDER */
 
@@ -35,17 +41,10 @@
     text-transform: uppercase;
 }
 
-.slider__items{
-    display: flex;
-    gap: var(--spacing-24);
-}
 
 
 
-/* SEPARATION */
-.separation{
-    margin: var(--spacing-68) auto;
-}
+/* GLIDE */
 
 iconify-icon {
     color: var(--dark-bg-solid);
@@ -53,12 +52,12 @@ iconify-icon {
     font-weight: 700;
 }
 
-/* OVERRIDE */
+/* GLIDE - OVERRIDE */
 
-/* .glide__arrow--left {
+.glide__arrow--left {
     left: 0;
 }
 
 .glide__arrow--right {
     right: 0;
-} */
+}

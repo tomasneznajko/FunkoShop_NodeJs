@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Funkoshop</title>
-    <link rel="stylesheet" href="../../css/tienda/index.css">
+    <link rel="stylesheet" href="../../css/pages/index.css">
     
 </head>
 <body>
@@ -220,23 +220,7 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script>
-        new Glide('.glide',
-            {
-                type: 'carousel',
-                startAt: 0,
-                perView: 3,
-                focusAt: 'center',
-                gap: 30,
-                breakpoints: {
-                    991: {
-                        perView: 2
-                        },
-                    768: {
-                        perView: 1
-                    }
-                }
-            }).mount();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="../js/glide.js"></script>
 </body>
 </html>

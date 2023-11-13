@@ -81,6 +81,13 @@
     gap: calc(var(--spacing-8) / 2);
 }
 
+/* SLIDER */
+
+.slider__items{
+    display: flex;
+    gap: var(--spacing-24);
+}  
+
 /* PAGINATION */
 
 .pagination{

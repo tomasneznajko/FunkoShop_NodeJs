@@ -45,7 +45,7 @@
     font-weight: 400;
     background-color: var(--tertiary-solid);
     color: var(--light-font-solid);
-    padding: var(--spacing-16);
+    padding: var(--spacing-20);
     transition: all .3s ease-in-out;
     display: flex;
     justify-content: center;

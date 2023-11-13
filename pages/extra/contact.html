@@ -4,25 +4,22 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>
-            Login - Funkoshop
-        </title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../css/pages/login.css">
-        <link rel="icon" href="../../images/branding/isotype.svg" type="image/Funkoshop-icon">
+        <link rel="stylesheet" href="../../css/pages/contact.css">
     </head>
     <body>
         <header>
             <nav class="navbar container">
              <picture class="navbar__logo">
-                 <a href="./index.html">  
+                 <a href="index.html">  
                      <img src="../../images/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko Shop"> 
                  </a>
              </picture>
              <ul class="navbar__menu">
                  <li class="navbar__item with-submenu">
-                     <a href="../tienda/shop.html" class="navbar__link with-icon">
+                     <a href="tienda/shop.html" class="navbar__link with-icon">
                          Shop <iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon>
                      </a>
                      
@@ -50,52 +47,32 @@
                      </a>
                  </li>
                  <li class="navbar__item">
-                     <a href="login.html" class="navbar__link">
+                     <a href="admin/login.html" class="navbar__link">
                          Log in
                      </a>
                  </li>
                  <li class="navbar__item">
-                     <a href="../tienda/cart.html" class="navbar__cart">
+                     <a href="tienda/cart.html" class="navbar__cart">
                          <img src="../../images/icons/cart-icon.svg" alt="carrito de compras">
                      </a>
                  </li>
              </ul>
             </nav>
-        </header> 
-        <main class="container form login">
-            <h2 class="form__title">Ingresar a mi cuenta</h2>
-            <form class="login__form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
-                <div class="form__box--flex">
-                    <label class="form__label" for="email">Email:</label>
-                    <input class="form__input form__text" type="email" name="email" id="email" placeholder="johndoe@correo.com" required>
-                </div>
-                <div class="form__box--flex">
-                    <label class="form__label" for="name">Contraseña:</label>
-                    <input class="form__input form__text" type="password" name="name" id="name" placeholder="Escribe tu contraseña..." required>
-                </div>
-                <div class="form__flex">
-                    <input class="form__btn" type="submit" value="Ingresar">
-                    <div class="form__remember">
-                        <input type="checkbox" id="recordarContrasena" name="recordarContrasena">
-                        <label class="form__text" for="recordarContrasena">Recordarme</label>
-                    </div>
-                </div>
-                <div class="form__link">
-                    <a class="form__text form__text--link" href="">Olvidé mi contraseña</a>
-                </div>
-            </form>
+        </header>
+        <main class="container form">
+
         </main>
         <footer class="footer">
             <nav class="navbar container">
                 <ul class="navbar__menu vertical">
                     <li class="navbar__link">
-                        <a href="../tienda/shop.html">Shop</a>
+                        <a href="tienda/shop.html">Shop</a>
                     </li>
                     <li class="navbar__link">
-                        <a href="register.html">Registrarse</a>
+                        <a href="admin/register.html">Registrarse</a>
                     </li>
                     <li class="navbar__link">
-                        <a href="login.html">Log in</a>
+                        <a href="admin/login.html">Log in</a>
                     </li>
                     <li class="navbar__link">
                         <a href="contact.html">Contacto</a>
@@ -108,7 +85,5 @@
             </p>
     
         </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     </body>
 </html>

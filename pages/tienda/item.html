@@ -6,7 +6,7 @@
         <title>Item - Funkoshop</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../css/tienda/item.css">
+        <link rel="stylesheet" href="../../css/pages/item.css">
         <link rel="icon" href="../../images/branding/isotype.svg" type="image/Funkoshop-icon">
     </head>
     <body>
@@ -77,13 +77,13 @@
                         $ 1799,99
                     </p>
                     <div class="cart__content">
-                        <form method="post" action="#" class="cart__counter cart__item">
-                            <input type="text" name="cart_input" id="cart_input" placeholder="0" class="cart__input">
+                        <div class="cart__counter cart__item">
+                            <input type="text" name="quantity" id="quantity" placeholder="0" class="cart__input">
                             <div class="counter">
-                                <button id="add" class="counter__item" type="button">+</button>
-                                <button id="subtract" class="counter__item" type="button">-</button>
+                                <button class="counter__item add" type="button">+</button>
+                                <button class="counter__item subtract" type="button">-</button>
                             </div>
-                        </form>
+                        </div>
                         
                         <a href="#" class="cart__link cart__item">
                             Agregar al Carrito
@@ -197,5 +197,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
     <script src="../../js/glide.js"></script>
+    <script src="../../js/counter.js"></script>
 </body>
 </html>
