@@ -3,12 +3,6 @@
 
 /* HEADER */
 
-button{
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-}
-
 header{
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-36);
