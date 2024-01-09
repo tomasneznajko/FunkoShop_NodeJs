@@ -1,0 +1,119 @@
+@import '../base/basic.css';
+@import '../library/slider.css';
+@import '../library/card.css';
+@import '../library/pagination.css';
+
+/* MAIN */
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: start;
+    padding: var(--spacing-68) 0;
+
+}
+
+/* SEARCHER */
+
+.searcher__content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    /* padding-top: var(--spacing-68); */
+}
+
+.searcher__item{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.searcher__title{
+    font-size: var(--font-large);
+    font-family: var(--base-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.searcher__category{
+    border-radius: .375rem;
+    
+}
+
+.searcher__input{
+    border-radius: .375rem;
+    border: .125rem solid var(--dark-solid);
+}
+
+.big__input{
+    padding: var(--spacing-8);
+}
+
+.small__input{
+    padding: calc(var(--spacing-8) / 2);
+    width: 3.75rem
+}
+
+
+.searcher__price{
+    display: flex;
+    gap: var(--spacing-8);
+    align-items: center;
+
+}
+
+.searcher__text{
+    font-size: var(--font-small);
+    font-family: var(--base-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.searcher__filter{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: var(--spacing-16);
+}
+
+.searcher__check{
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing-8) / 2);
+}
+
+.form__flex{
+    display: flex;
+    justify-content: center;
+}
+
+
+.form__btn{
+    padding: var(--spacing-12);
+    border: none;
+    border-radius: .375rem;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary-solid);
+    color: var(--light-font-solid);
+    width: 12rem;
+    cursor: pointer;
+}
+
+.form__btn:hover{
+    background-color: var(--tertiary-500);
+}
+
+/* SLIDER */
+
+.slider__items{
+    display: flex;
+    gap: var(--spacing-24);
+}  
+
+
+
+
+

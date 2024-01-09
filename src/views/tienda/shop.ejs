@@ -1,0 +1,107 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+        <main class="main container">
+            <aside class="searcher container">
+                <form class="searcher__content" action="/shop" method="post">
+                    <div class="searcher__item">
+                        <h2 class="searcher__title">
+                            Buscar
+                        </h2>
+                        <input type="search" name="search" id="search" placeholder="Item o categoría" class="searcher__input big__input">
+                    </div>
+                    <div class="searcher__item">
+                        <h2 class="searcher__title">
+                            Ordenar por
+                        </h2>
+                        <select name="opciones" id="opciones" class="searcher__input big__input">
+                            <option value="" disabled selected hidden>Mayor o menor</option>
+                            <option value="higher_price">Mayor a menor</option>
+                            <option value="lower_price">Menor a mayor</option>
+                        </select>
+                    </div>
+                    <div class="searcher__item">
+                        <h2 class="searcher__title">
+                            Precio
+                        </h2>
+                        <div class="searcher__price">
+                            <label for="min" class="searcher__text">Min</label>
+                            <input type="number" name="min" id="min" placeholder="0" class="searcher__input small__input">
+                            <span class="searcher__text">-</span>
+                            <label for="max" class="searcher__text">Max</label>
+                            <input type="number" name="max" id="max" placeholder="0" class="searcher__input small__input">
+                        </div>
+                    </div>
+                    <div class="searcher__item">
+                        <h2 class="searcher__title">
+                            Filtros
+                        </h2>
+                        <div class="searcher__filter">
+                            <div class="searcher__check">
+                                <input type="checkbox" name="filtro" id="filtro" value="nuevos">
+                                <label for="nuevos" class="searcher__text">Nuevos</label>
+                            </div>
+                            <div class="searcher__check">
+                                <input type="checkbox" name="filtro" id="filtro" value="ofertas">
+                                <label for="ofertas" class="searcher__text">Ofertas</label>
+                            </div>
+                            <div class="searcher__check">
+                                <input type="checkbox" name="filtro" id="filtro" value="edicion especial">
+                                <label for="edicion especial" class="searcher__text">Edición especial</label>
+                            </div>
+                            <div class="searcher__check">
+                                <input type="checkbox" name="filtro" id="filtro" value="favoritos" class="searcher__input big__input">
+                                <label for="favoritos" class="searcher__text">Favoritos</label>
+                            </div> 
+                                
+                        </div>
+
+                    </div>
+                    
+                    <div class="form__flex">
+                        <input class="form__btn" type="submit" value="Aplicar filtros">
+                    </div>
+                </form>
+            </aside>
+            <section class="slider container">
+                
+                
+                <ul class="slider__items container">
+                    <% items.forEach( (item, i) => { 
+                        if(i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) {%>
+                        <li class="slider__item">
+                            <article class="card-item">
+                                <a href="/shop/item/<%= item.product_id%>" class="card-item__link">
+                                    <picture class="card-item__cover">
+                                    <span class="card-item__tag">
+                                        Nuevo
+                                    </span>
+                                        <img src="/images/<%= item.image_front%>" alt="<%= item.product_description%>" class="card-item__img--front">
+                                        <img src="/images/<%= item.image_back%>" alt="<%= item.product_description%> en caja" class="card-item__img--back">
+                                    </picture>
+                                    <div class="card-item__content">
+                                        <p class="card-item__license"><%= item.licence_name%></p>
+                                        <h4 class="card-item__name"><%= item.product_name%></h4>
+                                        <p class="card-item__price">$ <%= item.price%></p>
+                                        <p class="card-item__promotion"><%= item.dues%> Cuotas sin interés</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                    <% }}); %>
+                </ul>
+                <%- include('../components/pagination') %>
+    
+
+                
+            </section>
+        </main>
+        
+    
+        <%- include('../partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+        <script src="pagination.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+     
+        <main class="main container">
+            <section class="prod container">
+                <h2 class="main__title">
+                    Carrito de compras
+                </h2>
+
+                <div class="prod__table">
+                    <div class="prod__box box__line">
+                        <p class="header__text flex-item-1">
+                            Detalle del producto
+                        </p>
+                        <p class="header__text flex-item-2">
+                            Cantidad
+                        </p>
+                        <p class="header__text flex-item-3">
+                            Total
+                        </p>
+                        <p class="header__text icon__none"></p>
+                    </div>
+
+                    <article class="prod__box box__line prod__item">
+                        <div class="prod__detail flex-item-1">
+                            <picture class="detail-item__cover">
+                                <img src="/images/star-wars/baby-yoda-1.webp" alt="baby Yoda">
+                            </picture>
+                            <div class="detail-item__text">
+                                <div>
+                                    <h3 class="detail-item__title">BABY YODA BLUEBALL</h3>
+                                    <p class="detail-item__subtitle">STAR WARS</p>
+                                </div>
+                                <p class="detail-item__price">Precio: $1799,99</p>
+                            </div>
+                        </div>
+                        <div class="cart__counter flex-item-2">
+                            <input type="text" name="quantity" id="quantity" placeholder="0" class="cart__input cart__item">
+                            <div class="counter cart__item">
+                                <button class="counter__item add" type="button">+</button>
+                                <button class="counter__item subtract" type="button">-</button>
+
+                            </div>
+                        </div>
+                        <p class="prod__price flex-item-3">
+                            $ 3599,99
+                        </p>
+                        <a href="" class="prod__closed">
+                            <iconify-icon icon="tabler:xbox-x" style="color: #f33;" width="28" height="28"></iconify-icon>
+                        </a>
+                        
+                    </article>
+
+                    <article class="prod__box box__line prod__item">
+                        <div class="prod__detail flex-item-1">
+                            <picture class="detail-item__cover">
+                                <img src="/images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
+                            </picture>
+                            <div class="detail__item">
+                                <h3 class="detail-item__title">Pidgeotto</h3>
+                                <p class="detail-item__subtitle">Pokemon</p>
+                                <p class="detail-item__price">Precio: $1799,99</p>
+                            </div>
+                        </div>
+                        <div class="cart__counter flex-item-2">
+                            <input type="text" name="quantity" id="quantity" placeholder="0" class="cart__input cart__item">
+                            <div class="counter cart__item">
+                                <button class="counter__item add" type="button">+</button>
+                                <button class="counter__item subtract" type="button">-</button>
+
+                            </div>
+                        </div>
+                        <p class="prod__price flex-item-3">
+                            $ 1799,99
+                        </p>
+                        <a href="" class="prod__closed">
+                            <iconify-icon icon="tabler:xbox-x" style="color: #f33;" width="28" height="28"></iconify-icon>
+                        </a>
+                        
+                    </article>
+                </div>
+            </section>
+            
+
+            <section class="summary container">
+                <h2 class="main__title">RESUMEN</h2>
+                <div class="prod__box box-summary">
+                    <span class="box__line line__summary">
+                        <p class="summary__text">CANTIDAD DE ELEMENTOS</p>
+                        <p>3</p>
+                    </span>
+                    <span class="box__line line__summary">
+                        <p class="summary__text">SUBTOTAL</p>
+                        <p>$ 5.399,97</p>
+                    </span>
+                    <span class="box__line line__summary">
+                        <p class="summary__text">ENVIO</p>
+                        <p>$ 0,00</p>
+                    </span>
+                    <span class="box__line line__summary final__summary">
+                        <p class="summary__text-total">TOTAL</p>
+                        <p>$ 5.399,97</p> 
+                    </span>
+                </div>
+                <!-- Valores precios -->
+                <a href="" class="cart__link summary__link">
+                    Ir a pagar
+                </a>
+
+            </section>
+
+        </main>
+
+        <%- include('../partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+        <script src="/js/counter.js"></script>
+    </body>
+</html>

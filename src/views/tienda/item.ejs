@@ -1,0 +1,54 @@
+<%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+      
+         <main class="main-cointainer">
+            <section class="collection container">
+                <picture class="collection__cover card-item__cover">
+                    <img src="/images/<%= item.image_front%>" alt="<%= item.product_description%>" class="card-item__img--front">
+                    <img src="/images/<%= item.image_back%>" alt="<%= item.product_description%> en caja" class="card-item__img--back">
+                </picture>
+                <article class="collection__content">
+
+                    <h2 class="collection__title">
+                        <%= item.product_name%>
+                    </h2>
+                    <p class="collection__description--item"> 
+                        <%= item.product_description%>
+                    </p>
+                    <p class="collection__price">
+                        $ <%= item.price%>
+                    </p>
+                    <div class="cart__content">
+                        <div class="cart__counter cart__item">
+                            <input type="text" name="quantity" id="quantity" placeholder="0" class="cart__input">
+                            <div class="counter">
+                                <button class="counter__item add" type="button">+</button>
+                                <button class="counter__item subtract" type="button">-</button>
+                            </div>
+                        </div>
+                        
+                        <a href="/shop/cart" class="cart__link cart__item">
+                            Agregar al Carrito
+                        </a>    
+                    </div>
+                    <div class="pay__content">
+                        <a href="" class="pay__link pay__text">Ver métodos de pago </a>
+                        <p class="pay__promotion pay__text"> - <%= item.dues%> Cuotas de interés</p>
+                    </div>
+
+                </article>
+    
+            </section>
+            <%- include('../components/glide') %>
+        </main>
+
+
+    <%- include('../partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+    <script src="/js/glide.js"></script>
+    <script src="/js/counter.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %> 
+        <main class="container form">
+            <h2 class="form__title">Editar item</h2>
+            <form class="create__form" action="/admin/edit/<%= item.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="form__flex">
+                    <div class="form__box--flex">
+                        <label class="form__label" for="category">Categoría:</label>
+                        <select class="form__select select__width--intermediate" name="category" id="category" required>
+                            <option value="" disabled selected hidden>Seleccionar</option>
+                            <% categories.forEach((category, i) => { %>
+                                <option <% if (item.category_id === i +1) { %>selected<% } %> value="<%= i+1%>"><%= category.category_name%></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="licence">Licencia:</label>
+                        <select class="form__select select__width--intermediate" name="licence" id="licence" required>
+                            <option value="" disabled selected hidden>Seleccionar</option>
+                            <% licences.forEach((licence, i) => { %>
+                                <option <% if (item.licence_id === i +1) { %>selected<% } %> value="<%= i+1%>"><%= licence.licence_name%></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__label" for="name">Nombre del producto:</label>
+                    <input class="form__input form__text" type="text" name="name" id="name" value="<%= item.product_name %>"
+                    placeholder="Kakashi Hatake Shippuden Saga" size="25" required>
+                </div>
+                <div>
+                    <textarea class="form__textarea form__text" name="description" id="description" cols="30" rows="10"
+                    placeholder="Descripción del producto" required><%= item.product_description %></textarea>
+                </div>
+                <div class="form__flex">
+                    <div class="form__box--flex">
+                        <label class="form__label" for="sku">SKU:</label>
+                        <input class="form__input form__text" type="text" name="sku" id="sku" value="<%= item.sku %>"
+                        placeholder="SSK111AB001" size="9" required>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="price">Precio:</label>
+                        <div class="form__input--wrapper form__text"><span>$</span>
+                            <input class="form__input form__text" type="text" name="price" id="price" data-type="currency" value="<%= item.price %>"
+                            placeholder="0.000,00" size="6">
+                        </div>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="stock">Stock:</label>
+                        <div class="form__input--wrapper form__text">
+                            <input class="form__input form__text form__small" type="text" name="stock" id="stock" value="<%= item.stock %>"
+                            placeholder="0" size="2" required><span>unidades</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__flex">
+                    <div class="form__box--flex">
+                        <label class="form__label" for="discount">Descuento:</label>
+                        <div class="form__input--wrapper form__text">
+                            <input class="form__input form__text form__small" type="text" name="discount" id="discount" value="<%= item.discount %>"
+                            placeholder="0" size="2" required>
+                            <span>%</span>
+                        </div>
+                    </div>
+                    <div class="form__box--flex">
+                        <label class="form__label" for="dues">Cuotas:</label>
+                        <select class="form__select select__width--large" name="dues" id="dues">
+                            <option <% if (item.dues === 0) { %>selected<% } %> value="0">Sin cuotas</option>
+                            <option <% if (item.dues === 3) { %>selected<% } %> value="3">3 Cuotas sin inter&eacute;s</option>
+                            <option <% if (item.dues === 6) { %>selected<% } %> value="6">6 Cuotas sin inter&eacute;s</option>
+                            <option <% if (item.dues === 9) { %>selected<% } %> value="9">9 Cuotas sin inter&eacute;s</option>
+                            <option <% if (item.dues === 12) { %>selected<% } %> value="12">12 Cuotas sin inter&eacute;s</option>
+                            <option <% if (item.dues === 18) { %>selected<% } %> value="18">18 Cuotas sin inter&eacute;s</option>
+                            <option <% if (item.dues === 24) { %>selected<% } %> value="24">24 Cuotas sin inter&eacute;s</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="edit__images">
+                    <div class="edit__img">
+                        <picture class="edit__img--picture">
+                            <img src="/images/<%= item.image_front %>" alt="<%= item.product_name %>">
+                        </picture>
+                        
+                        <p class="edit__img--side">Frente</p>
+                        <div>
+                            <input type="file" name="image-front" id="image-front" class="form__file">
+                        </div>
+                    </div>
+                    <div class="edit__img">
+                        <picture class="edit__img--picture">
+                            <img src="/images/<%= item.image_back %>" alt="<%= item.product_name %> en caja">
+                        </picture>
+                        
+                        <p class="edit__img--side">Dorso</p>
+                        <div>
+                            <input type="file" name="image-back" id="image-back" class="form__file">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="form__flex">
+                    <input class="form__btn form__btn-color" type="submit" value="Modificar Producto">
+                </div>
+            </form>
+        </main>
+
+        <%- include('../partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    </body>
+</html>

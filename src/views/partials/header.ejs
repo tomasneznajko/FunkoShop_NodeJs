@@ -1,0 +1,102 @@
+
+<header>
+    <% if(isLogged){ %>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="/home">  
+                    <img src="/images/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko Shop"> 
+                </a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a href="/shop" class="navbar__link with-icon">
+                        Shop <iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon>
+                    </a>
+                    
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="/shop?filter=funkos" class="submenu__link">
+                                Funkos
+                            </a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="/shop?filter=remeras" class="submenu__link">
+                                Remeras
+                            </a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="/shop?filter=llaveros" class="submenu__link">
+                                Llaveros
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="/contact" class="navbar__link">
+                        Contacto
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <form method="post" action="/auth/logout" >
+                        <button type="submit" class="navbar__link">
+                            Log out
+                        </button>
+                    </form>
+                </li>
+                <li class="navbar__item">
+                    <a href="/shop/cart" class="navbar__cart">
+                        <img src="/images/icons/cart-icon.svg" alt="carrito de compras">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    <% } else{ %>
+       <nav class="navbar container">
+        <picture class="navbar__logo">
+            <a href="/home">  
+                <img src="/images/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funko Shop"> 
+            </a>
+        </picture>
+        <ul class="navbar__menu">
+            <li class="navbar__item with-submenu">
+                <a href="/shop" class="navbar__link with-icon">
+                    Shop <iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon>
+                </a>
+                
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="/shop?filter=funkos" class="submenu__link">
+                            Funkos
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="/shop?filter=remeras" class="submenu__link">
+                            Remeras
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="/shop?filter=llaveros" class="submenu__link">
+                            Llaveros
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar__item">
+                <a href="/contact" class="navbar__link">
+                    Contacto
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="/auth/login" class="navbar__link">
+                    Log in
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="/shop/cart" class="navbar__cart">
+                    <img src="/images/icons/cart-icon.svg" alt="carrito de compras">
+                </a>
+            </li>
+        </ul>
+       </nav>
+    <% } %>
+    </header>

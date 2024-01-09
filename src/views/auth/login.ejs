@@ -1,0 +1,68 @@
+<%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="container form login">
+            <h2 class="form__title">Ingresar a mi cuenta</h2>
+
+            <form class="login__form" action="/auth/login" method="post" enctype="application/x-www-form-urlencoded">
+
+                    <div class="form__content">
+
+                    
+                        <div class="form__box--flex">
+                            <label class="form__label" for="email">Email:</label>
+                            <input class="form__input form__text" type="email" name="email" id="email" placeholder="johndoe@correo.com" required
+                            <% if (haveErrors) { %>
+                                value="<%= user.email %>"
+                            <% } %>
+                            >
+                            
+                        </div>
+                           
+                            <% if (haveErrors) {
+
+                                const error = errors.find(function(error_buscado) {
+                                    return error_buscado.path === "email";
+                                });
+                                if(error !== undefined){ %>
+                                    <p class="form__error">*<%= error.msg %></p> <% 
+                                }} %>
+                        
+                    </div>
+                    <div class="form__content">
+                        <div class="form__box--flex">
+                            <label class="form__label" for="name">Contraseña:</label>
+                            <input class="form__input form__text" type="password" name="password" id="password" placeholder="Escribe tu contraseña..." required>
+                        
+                        
+                        </div>    
+                        
+                        <% if (haveErrors) {
+
+                                const error = errors.find(function(error_buscado) {
+                                    return error_buscado.path === "password";
+                                });
+                                if(error !== undefined){ %>
+                                    
+                                    <p class="form__error">*<%= error.msg %></p> <% 
+                                }} %>
+                    </div>
+                        
+                        
+                        <div class="form__flex">
+                            <input class="form__btn form__btn-color" type="submit" value="Ingresar">
+                            <div class="form__remember">
+                                <input type="checkbox" id="recordarContrasena" name="recordarContrasena">
+                                <label class="form__text" for="recordarContrasena">Recordarme</label>
+                            </div>
+                        </div>
+                        <div class="form__link">
+                            <a class="form__text form__text--link" href="">Olvidé mi contraseña</a>
+                        </div>
+            </form>
+        </main>
+        <%- include('../partials/footer') %>
+
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    </body>
+</html>

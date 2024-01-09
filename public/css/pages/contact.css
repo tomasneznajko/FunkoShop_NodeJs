@@ -1,0 +1,6 @@
+@import '../base/basic.css';
+@import 'register.css';
+
+.form__textarea{
+    width: 50rem;
+}

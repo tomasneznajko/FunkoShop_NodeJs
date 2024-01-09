@@ -1,0 +1,37 @@
+<article class="pagination">
+    <%
+        var arrowLeft = (parseInt(currentPage) - 1).toString();
+        var arrowRight = (parseInt(currentPage) + 1 ).toString()
+    %>
+    <ul class="pagination_items">
+
+        <li class="pagination_item">
+            <a href="/<%=name%>?page=<%=arrowLeft%>" class="pagination_link <%if(currentPage === "1"){ %>off_link <%}%>"><iconify-icon icon="gridicons:chevron-left"></iconify-icon></a>
+        </li>
+        
+        <% var count = 0;
+        for(var page = 1; page<parseInt(currentPage); page++){ 
+            
+            if(page>parseInt(currentPage)-paginationPages){
+                count++;
+            %>
+
+            <li class="pagination_item">
+                <a href="/<%=name%>?page=<%=page%>" class="pagination_link <%if(currentPage === (page).toString()){ %> active_link <%}%>" ><%=page%></a>
+            </li>
+            <%}}%>
+
+        <% for(let i = 0; i<paginationPages-count; i++ ){ 
+            let page = i+parseInt(currentPage); %>
+
+            <li class="pagination_item">
+                <a href="/<%=name%>?page=<%=page%>" class="pagination_link <%if(currentPage === (page).toString()){ %> active_link <%}%>" ><%=page%></a>
+            </li>
+        <%}%>
+
+        <li class="pagination_item">
+            <a href="/<%=name%>?page=<%=arrowRight%>" class="pagination_link <%if(currentPage == totalPages){ %>off_link <%}%>"><iconify-icon icon="humbleicons:chevron-right"></iconify-icon></a>
+        </li>
+        
+    </ul>
+</article>

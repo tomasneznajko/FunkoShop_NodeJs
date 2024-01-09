@@ -1,0 +1,73 @@
+/* EXTERNAL - GLIDE */
+
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
+
+
+
+/* ANIMATION */
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+/* SEPARATION */
+.separation{
+    margin: var(--spacing-68) auto;
+}
+
+
+
+/* SLIDER */
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+}
+
+.slider__title{
+    font-size: var(--font-display);
+    font-family: var(--alternative-font);
+    text-transform: uppercase;
+}
+
+.slider__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Otra opción: space-around */
+}
+
+.slider__item {
+    width: 30%; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: var(--spacing-16); /* Ajusta el margen inferior según tus necesidades */
+}
+
+
+
+/* GLIDE */
+
+iconify-icon {
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
+}
+
+/* GLIDE - OVERRIDE */
+
+.glide__arrow--left {
+    left: 0;
+}
+
+.glide__arrow--right {
+    right: 0;
+}

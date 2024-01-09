@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="container form">
+            <h2 class="form__title">Contáctanos</h2>
+            <form class="login__form" action="/contact" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form__box--flex">
+                    <label class="form__label" for="nombre">Nombre:</label>
+                    <input class="form__input form__text" type="text" name="nombre" id="nombre" placeholder="John" required>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__label" for="apellido">Apellido:</label>
+                    <input class="form__input form__text" type="text" name="apellido" id="apellido" placeholder="Doe" required>
+                </div>                
+                <div class="form__box--flex">
+                    <label class="form__label" for="email">Email:</label>
+                    <input class="form__input form__text" type="email" name="email" id="email" placeholder="johndoe@correo.com" required>
+                </div>
+
+                <div>
+                    <textarea class="form__textarea form__text" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje a enviar.." required></textarea>
+                </div>
+
+                <div class="form__flex">
+                    <input class="form__btn form__btn-color" type="submit" value="Enviar">
+                </div>
+            </form>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>
