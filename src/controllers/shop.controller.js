@@ -12,7 +12,7 @@ module.exports = {
             isLogged: req.session.isLogged,
             itemsPerPage: 9,
             currentPage: req.query.page? req.query.page : '1',
-            totalPages: 40,
+            totalPages: Math.ceil(data.length / 9),
             paginationPages: 4
         });
       },
