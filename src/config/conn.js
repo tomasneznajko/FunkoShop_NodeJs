@@ -12,7 +12,7 @@ const pool = mysql.createPool({
   database: process.env.DB,
   port: process.env.PORT_BD,
   waitForConnections: true,
-  connectionLimit: 10,
+  connectionLimit: 0,
   queueLimit: 0,
 });
 
@@ -23,6 +23,9 @@ const pool = mysql.createPool({
 pool.getConnection((error, connection) => {
   if (error) {
     console.error('Error al obtener una conexión:', error);
+    console.log(process.env.USER);
+    console.log(process.env.HOST);
+
   } else {
     console.log('Conexión exitosa a la base de datos');
     connection.release();
