@@ -7,10 +7,11 @@ const dotenv= require('dotenv');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session')
+const {port} = require('./src/config/port')
 
 
 const app = express();
-const port = 4000;
+
 //para procesar datos enviados desde el formulario
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json()) 
