@@ -52,4 +52,4 @@ app.set('views', __dirname + '/src/views'); // specify the views directory
 dotenv.config({path: __dirname + '/.env'}); 
 
 
-app.listen(port, () => { console.log(`El servidor esta corriendo en el http://localhost:${port}/home`)})
+app.listen(port);
