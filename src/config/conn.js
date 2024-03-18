@@ -1,5 +1,5 @@
 const mysql = require('mysql2');
-require('dotenv').config();
+
 
 /*
  * Creamos un pool de conexiones
